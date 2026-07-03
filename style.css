@@ -41,6 +41,18 @@ main {
   text-align: center;
 }
 
+a.hyper {
+  display: inline-block;
+  color: orange;
+  text-decoration: none;
+  transition: 0.4s linear(0, 0.01 0.7%, 0.044 1.5%, 0.184 3.2%, 0.375 4.8%, 0.932 8.9%, 1.182 11.2%, 1.269 12.3%, 1.329 13.3%, 1.368 14.3%, 1.39 15.4%, 1.386 16.9%, 1.346 18.5%, 1.269 20.3%, 1.045 24.5%, 0.95 26.6%, 0.877 29%, 0.847 31.3%, 0.848 32.8%, 0.863 34.4%, 1.018 42.5%, 1.047 44.8%, 1.06 47.1%, 1.054 50.4%, 0.993 58.4%, 0.977 62.8%, 0.979 66.3%, 1.009 78.6%, 1);
+    cursor: default;
+}
+
+a.hyper:hover {
+  transform: scaleX(1.15) scaleY(1.5);
+}
+
 ul .active {
   font-weight: bold;
 }
@@ -108,6 +120,16 @@ ul li a:hover {
   ul li a:hover {
     transform: none;
   }
+  ul li a {
+    padding: 24px 48px;
+  }
+  ul {
+    border-radius: 2em;
+    font-size: 17pt;
+  }
+  a:hover {
+    transform: none;
+  }
 }
 
 @media (prefers-reduced-motion) {
@@ -118,6 +140,21 @@ ul li a:hover {
     transition: 0.2s linear;
   }
   .name {
-    transition: 0.7s linear;
+    transition: 0.5s linear;
+  }
+  a.hyper {
+    transition: 0.2s linear;
+  }
+}
+
+@media (hover: none) and (prefers-reduced-motion) {
+  .neocities {
+    transition: none;
+  }
+  ul li a {
+    transition: none;
+  }
+  .name {
+    transition: none;
   }
 }
